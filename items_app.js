@@ -22,8 +22,9 @@ if (Meteor.isClient) {
       }
     }
   })
-
 }
+
+// What we did here was limit the ability to read data, not the ability to write data. If I remember correctly, I believe that comes with the "insecure" package. 
 
 // There are a couple of options for stopping a subscription. We can store the Meteor.subscribe() in a variable, then set the variable.stop() to an event to stop the subscription.
 // But we can also use "autosubscribe", which is what we should use going forward.
