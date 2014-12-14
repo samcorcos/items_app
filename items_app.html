@@ -1,14 +1,21 @@
 <head>
-  <title>items_app</title>
+  <title>itemsApp</title>
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
-
-  {{> hello}}
+  {{> name}}
+  {{> items}}
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name='name'>
+  <input type="text" name="" value="">
+</template>
+
+<template name='items'>
+  <h1>Items</h1>
+  <ul>
+    {{#each items}}
+      <li>{{name}} | {{category}}</li>
+    {{/each}}
+  </ul>
 </template>
